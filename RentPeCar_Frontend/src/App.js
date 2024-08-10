@@ -11,6 +11,7 @@ import CarCategoryDetails from "./User/pages/Car/CarCategoryDetails";
 import Cars from "./User/pages/Car/Cars";
 import CarType from "./User/pages/Car/CarType";
 import Navbar from "./User/Components/Navbar";
+import Footer from "./User/Components/Footer";
 import { SidebarData } from "./Admin/Components/SidebarData";
 import EmployeeDashboard from "./Employee/Components/EmployeeDashboard";
 import Car from "./Employee/Fragments/CarFregment";
@@ -21,7 +22,7 @@ function App() {
       
       <Navbar />
       
-          
+    
 
       
       

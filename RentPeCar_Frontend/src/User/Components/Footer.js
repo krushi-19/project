@@ -12,10 +12,10 @@ const Footer=()=> {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-            RentPeCar
+            RentWheels
             </Link>
           </div>
-          <small class='website-rights'>RentPeCar © 2023</small>
+          <small class='website-rights'>RentWheels © 2024</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'

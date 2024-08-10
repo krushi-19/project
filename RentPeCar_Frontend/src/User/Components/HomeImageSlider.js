@@ -10,7 +10,7 @@ const HomeImageSlider = () => {
       <div>
         <div className="row title">
           <div class="col-sm btn btn-warning">
-            <h1>Welcome To RentPeCar - Online Car Rental Services</h1>
+            <h1>Welcome To RentWheels - Online Car Rental Services</h1>
           </div>
         </div>
       </div>

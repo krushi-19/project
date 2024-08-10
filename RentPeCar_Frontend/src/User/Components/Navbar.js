@@ -21,6 +21,7 @@ import ResetPassword from "../pages/User/ResetPassword";
 import SignUp from "../pages/User/SignUp";
 import UpdateProfile from "../pages/User/UpdateProfile";
 import HomeImageSlider from "./HomeImageSlider";
+
 import Pay from "./Pay";
  /* import Feedback from "../../../src/Feedback/component/feedback"; */
 

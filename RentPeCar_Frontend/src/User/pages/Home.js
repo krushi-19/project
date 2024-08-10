@@ -1,16 +1,15 @@
 import Footer from "../Components/Footer";
 import { Header } from "../Components/Header";
-import HomeImageSlider from "../Components/HomeImageSlider"
+import HomeImageSlider from "../Components/HomeImageSlider";
 
 const Home = () => {
-  
-
   return (
     <div>
-      <HomeImageSlider/>
-      <Footer/>
-
+      
+      <HomeImageSlider />
+      <Footer />
     </div>
   );
 };
+
 export default Home;

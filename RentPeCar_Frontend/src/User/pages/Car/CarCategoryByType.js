@@ -1,8 +1,9 @@
 import { url } from "../../../Commons/constants";
-import { useLocation ,useHistory} from "react-router";
+import { useLocation, useHistory } from "react-router";
 import CarCard from "../../Components/CarCard";
 import { useState } from "react";
 import { Header } from "../../Components/Header";
+import Footer from "../../Components/Footer";
 import axios from "axios";
 
 const CarCategoryByType = () => {
@@ -12,8 +13,8 @@ const CarCategoryByType = () => {
   const history = useHistory();
   console.log(cars);
 
-  const getCarCategoryDetails = (cars) => {
-    axios.get(url + "/carCategory/" + cars.id).then((response) => {
+  const getCarCategoryDetails = (car) => {
+    axios.get(url + "/carCategory/" + car.id).then((response) => {
       const result = response.data;
       if (result.status === "success") {
         setCarCategory(result);
@@ -22,15 +23,20 @@ const CarCategoryByType = () => {
           carCategory: result.data,
         });
       } else {
-        alert("error occured while getting all car categories");
+        alert("Error occurred while getting car categories");
       }
     });
   };
+
   return (
-    <div>
+    <div className="flex-container">
       <Header />
-      <CarCard onItemSelect={getCarCategoryDetails} cars={cars} />{" "}
+      <div className="content">
+        <CarCard onItemSelect={getCarCategoryDetails} cars={cars} />
+      </div>
+      <Footer />
     </div>
   );
 };
+
 export default CarCategoryByType;

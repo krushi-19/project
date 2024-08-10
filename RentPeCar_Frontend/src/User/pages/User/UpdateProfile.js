@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { url } from "../../../Commons/constants";
+import { Header } from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
 const UpdateProfile = () => {
   // get the history object
@@ -23,18 +25,16 @@ const UpdateProfile = () => {
       const data = new FormData();
       // add the data
       data.append("username", username);
-
       data.append("phone", phone);
-
       data.append("address", address);
+      
       // send the data to the API
       axios
         .put(url + "/user/updateProfile/" + user.data.userid, data)
         .then((response) => {
           const result = response.data;
           if (result.status === "success") {
-            alert("Profile updated  Successfully");
-
+            alert("Profile updated Successfully");
             history.goBack();
           } else {
             alert("Error while updating");
@@ -44,8 +44,9 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div style={{ display: "flex" }}>
-      <div className="container" style={{ width: "50%", display: "block" }}>
+    <div className="flex-container">
+      <Header />
+      <div className="container content" style={{ width: "50%" }}>
         <h1 className="title-header">Update Profile</h1>
         <div className="mb-3">
           <label htmlFor="">User Name</label>
@@ -59,7 +60,6 @@ const UpdateProfile = () => {
             placeholder={user.data.username}
           />
         </div>
-
         <div className="mb-3">
           <label htmlFor="">Phone</label>
           <input
@@ -71,7 +71,6 @@ const UpdateProfile = () => {
             className="form-control"
           />
         </div>
-
         <div className="mb-3">
           <label htmlFor="">Address</label>
           <input
@@ -83,7 +82,6 @@ const UpdateProfile = () => {
             placeholder={user.data.address}
           />
         </div>
-
         <div className="mb-3">
           <button
             onClick={addUserToDB}
@@ -94,13 +92,15 @@ const UpdateProfile = () => {
           &nbsp;&nbsp;
           <button
             onClick={history.goBack}
-            className="col-2 btn  btn-sm btn-warning"
+            className="col-2 btn btn-sm btn-warning"
           >
             Back
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
+
 export default UpdateProfile;

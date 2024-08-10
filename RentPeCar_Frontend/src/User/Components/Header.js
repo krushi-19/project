@@ -41,7 +41,7 @@ export const Header = () => {
               class=" d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
             >
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp2KXbtD8paphq4ikfB5It9gvkWh9poQNdzw&usqp=CAU" alt="logo" style={{height:"40px"}} />
-              <span style={{ color: "#ff4000" ,fontSize:"50px",fontFamily:"monospace",marginLeft:"5px",fontWeight:"bold"}}> RentPeCar </span>
+              <span style={{ color: "#ff4000" ,fontSize:"50px",fontFamily:"monospace",marginLeft:"5px",fontWeight:"bold"}}> RentWheels </span>
             </Link>
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
